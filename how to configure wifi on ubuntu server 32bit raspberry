@@ -1,0 +1,35 @@
+The Netplan configuration file resides in /etc/netplan directory.
+sudo nano /etc/netplan/50-cloud-init.yaml
+
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: true
+            optional: true
+    version: 2
+    wifis:
+        wlan0:
+            dhcp4: true
+            optional: true
+            access-points:
+                "SSID_name":
+                    password: "WiFi_password"
+
+Use whatever indentation, but stick to it thrughout the entire file
+
+Next use te commands
+
+sudo netplan generate
+
+sudo netplan apply
+
+Possible troubleshooting
+
+sudo systemctl start wpa_supplicant
+
+sudo reboot
+
+sudo netplan generate
+
+sudo netplan apply

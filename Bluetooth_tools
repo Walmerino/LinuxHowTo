@@ -1,0 +1,28 @@
+hciconfig - likewise ifconfig
+
+hcitool - This hcitool is a very powerful CLI tool implemented in 
+kali Linux that allows a user to interface with the Bluetooth 
+stack. It is also a great tool that you can use in your own 
+scripts.
+
+sdptool - Kali Linux also has a built-in tool for performing 
+Service Discovery (SDP). It allows you to enumerate all the 
+services running on the Bluetooth device.
+
+l2ping - All of us know the ping utility from the IP world that is 
+used to check the connectivity between IP nodes using the ICMP 
+protocol. The Bluetooth world has its own equivalent called l2ping. 
+This discovery tool, allows the user to check whether a particular 
+device is within the range and is reachable for Bluetooth 
+communication.
+
+
+bluetoothctl - interactive bluetooth controll tool
+
+bluetooth-sendto - GTK application for transferring files over 
+Bluetooth sintaxe bluetooth-sendto --device=50:98:39:D5:5A:79 skull.jpeg
+
+gatttool - 
+
+
+

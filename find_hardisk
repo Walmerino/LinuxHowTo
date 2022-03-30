@@ -1,0 +1,12 @@
+Find it:
+
+ls /dev/ | grep sda*
+
+or:
+
+fdisk -l
+
+mount it:
+
+sudo mount  /dev/sdb /mnt/
+

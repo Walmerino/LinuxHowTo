@@ -1,0 +1,15 @@
+    Put the Raspberry Pi OS SD card into your computer
+    Navigate to the boot directory
+    Add your wpa_supplicant.conf file
+    Put your SD card in the Raspberry Pi, boot, and connect
+    Troubleshooting
+
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+
+network={
+        ssid="ssidname"
+        psk="password"
+        key_mgmt=WPA-PSK
+}

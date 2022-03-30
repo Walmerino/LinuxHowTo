@@ -1,0 +1,33 @@
+install ftp:
+
+sudo apt isntall ftp 
+
+FTP configuration file. Make the following changes:
+
+sudo nano /etc/vsftpd.config
+
+write_enable=YES
+
+local_umask=022
+
+chroot_local_user=YES
+
+anonymous_enable=YES
+
+Add those lines:
+
+user_sub_token=$USER
+
+local_root=/home/$USER/FTP
+
+Create a FTP directory:
+
+mkdir -p /home/pi/FTP/files
+
+After adding the directory, remove write permissions to prevent other users to write into it:
+
+chmod a-w /home/pi/FTP
+
+Resatart Vsftpd Daemon:
+
+sudo service vsftpd restart 

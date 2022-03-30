@@ -1,0 +1,3 @@
+How to change owner
+
+sudo chwon postgres:postgres /file	

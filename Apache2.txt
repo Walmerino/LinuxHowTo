@@ -1,0 +1,42 @@
+In this project I'm setting up a LAMP stack. Although nowadays it's considered a legacy stack I consider it a intresting begining towards more modern approachs. I'm also moving from mysql to postgresql in this projec, simply because this is the database I had already installed on my Raspberry Pi before-hand. I'm doing this project via ssh with a Raspberry Pi 3 Model B Rev 1.2 on my local network. I'm using SCP to upload the files into the server. I will also uso PDO_PGSQL to integrate the database to the  PHP.
+
+Update Raspberry system:
+
+sudo apt update && sudo apt upgrade -y
+
+Check Raspberry Pi system:
+
+cat /proc/cpuinfo
+
+Model		: Raspberry Pi 3 Model B Rev 1.2
+
+cat /etc/os-release
+
+"Raspbian GNU/Linux 11 (bullseye)"
+
+Install Apache2:
+
+sudo apt install apache2 -y
+
+Check the server:
+
+hostname -I
+
+When you install the apache server, it will create your web server root directory, all files shown here are exposed by the webserver: E.g. /var/www/html/index.html 
+
+Install Postgresql:
+
+sudo apt install postgresql -y
+
+Send file using scp to the remote host:
+
+First change permissios to the apache root folder:
+
+sudo chmod 777 /var/www/html/
+
+Then send the file using the commands scp:
+
+scp /directory/path/file_name user_name@x.x.x.x:/var/www/html
+
+change permissios back to default 775
+
